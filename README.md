@@ -17,18 +17,18 @@ Vamos a intentar facilitar las tareas de lectura y escritura de archivos:
 
 
 
+**cuentaLineas(String archivo)**
+
+    Cuenta el numero de lineas de texto que contiene un archivo y las devuelve como un entero.
+
+
+
 **escribeTexto(String archivo, boolean sobreescribir, String texto)**
 
     Escribe en archivo el texto indicado.
 
     Si sobreescribir == true machaca todo el archivo con el nuevo contenido
     Si sobreescribir == false agrega el texto al final del archivo
-
-
-
-**cuentaLineas(String archivo)**
-
-    Cuenta el numero de lineas de texto que contiene un archivo y las devuelve como un entero.
 
 
 

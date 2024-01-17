@@ -4,6 +4,35 @@ import java.io.*;
 
 public class LibArchivo {
     
+
+    // CUENTA EL NUMERO DE LINEAS DE TEXTO QUE CONTIENE UN ARCHIVO
+    // #LEE #TEXTO
+    public static int cuentaLineas(String archivo) {
+
+        File archivoF = new File(archivo);
+        int retorno = 0;
+
+        try {
+            // Abrimos archivo y creamos objeto BufferedReader para leer línea por línea
+            FileReader fr = new FileReader(archivoF);
+            BufferedReader br = new BufferedReader(fr);
+
+            // Leer el archivo hasta llegar al final
+            while (br.readLine() != null) {
+                retorno++;
+            }
+
+            // Cerrar el flujo de lectura
+            br.close();
+            fr.close();
+        } catch (Exception e) {
+            System.out.println("Excepción en cuentaLineas@LibArchivo: " + e);
+        }
+
+        return retorno;
+    }
+
+
     // AGREGA UNA LINEA DE TEXTO AL ARCHIVO
     // #ESCRIBE #TEXTO
     public static void escribeTexto(String archivo, boolean sobreescribir, String texto) {
@@ -33,32 +62,6 @@ public class LibArchivo {
         }
     }
 
-    // CUENTA EL NUMERO DE LINEAS DE TEXTO QUE CONTIENE UN ARCHIVO
-    // #LEE #TEXTO
-    public static int cuentaLineas(String archivo) {
-
-        File archivoF = new File(archivo);
-        int retorno = 0;
-
-        try {
-            // Abrimos archivo y creamos objeto BufferedReader para leer línea por línea
-            FileReader fr = new FileReader(archivoF);
-            BufferedReader br = new BufferedReader(fr);
-
-            // Leer el archivo hasta llegar al final
-            while (br.readLine() != null) {
-                retorno++;
-            }
-
-            // Cerrar el flujo de lectura
-            br.close();
-            fr.close();
-        } catch (Exception e) {
-            System.out.println("Excepción en cuentaLineas@LibArchivo: " + e);
-        }
-
-        return retorno;
-    }
 
     // DEVUELVE UN STRING CON EL CONTENIDO DE LA LINEA INDICADA DEL ARCHIVO DE
     // INDICADO
@@ -89,6 +92,7 @@ public class LibArchivo {
         return retorno;
     }
 
+    
     // GUARDA UN UNICO OBJETO EN ARCHIVO INDICADO MACHACANDO CUALQUIER CONTENIDO
     // #ESCRIBE #BINARIO
     public static void sobreescribeObjeto(String archivo, Object objeto) {
