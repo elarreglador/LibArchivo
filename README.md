@@ -17,7 +17,7 @@ Vamos a intentar facilitar las tareas de lectura y escritura de archivos:
 
 
 
-escribeTexto(String archivo, boolean sobreescribir, String texto)
+**escribeTexto(String archivo, boolean sobreescribir, String texto)**
 
     Escribe en archivo el texto indicado.
 
@@ -26,19 +26,19 @@ escribeTexto(String archivo, boolean sobreescribir, String texto)
 
 
 
-cuentaLineas(String archivo)
+**cuentaLineas(String archivo)**
 
    Cuenta el numero de lineas de texto que contiene un archivo y las devuelve como un entero.
 
 
 
-leeLinea(String archivo, int linea)
+**leeLinea(String archivo, int linea)**
    
    Devuelve un String con el contenido de la linea indicada
 
 
 
-sobreescribeObjeto(String archivo, Object objeto)
+**sobreescribeObjeto(String archivo, Object objeto)**
 
    Guarda un unico objeto en el archivo binario indicado sobreescribiendo cualquier otra cosa que exista en el archivo.
 
