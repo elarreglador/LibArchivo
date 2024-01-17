@@ -19,10 +19,10 @@ Vamos a intentar facilitar las tareas de lectura y escritura de archivos:
 
 **escribeTexto(String archivo, boolean sobreescribir, String texto)**
 
-    Escribe en archivo el texto indicado.
+   Escribe en archivo el texto indicado.
 
-    Si sobreescribir == true machaca todo el archivo con el nuevo contenido
-    Si sobreescribir == false agrega el texto al final del archivo
+   Si sobreescribir == true machaca todo el archivo con el nuevo contenido
+   Si sobreescribir == false agrega el texto al final del archivo
 
 
 
